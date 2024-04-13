@@ -9,5 +9,5 @@ interface ActivityFeedFeatureProps {
 }
 
 export interface ActivityFeedDescrProps extends Partial<ActivityFeedFeatureProps> {
-  deleteItem?: (timestamp: string | undefined) => void;
+  deleteItem: (timestamp: string | undefined) => void;
 }

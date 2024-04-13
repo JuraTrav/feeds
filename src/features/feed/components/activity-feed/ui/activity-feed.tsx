@@ -1,4 +1,3 @@
-// import { useEffect } from 'react';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import { ActivityFeedDescrMemo } from '../components/activity-feed-descr';
 import { ActivityFeedDetailMemo } from '../components/activity-feed-detail';
