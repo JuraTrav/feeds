@@ -1,5 +1,5 @@
 import { ActivityFeedForm } from "../components/activity-feed-form";
-import { ActivityFeed } from "../components/activity-feed";
+import { ActivityFeeds } from "../components/activity-feeds";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { FeedFeatureContextProvider } from "@contexts/FeedFeatureContext/feed-feature-context-provider";
 
@@ -38,7 +38,7 @@ const FeedFeature = () => {
     <ThemeProvider theme={theme}>
       <FeedFeatureContextProvider>
         <ActivityFeedForm />
-        <ActivityFeed />
+        <ActivityFeeds />
       </FeedFeatureContextProvider>
     </ThemeProvider>
   );

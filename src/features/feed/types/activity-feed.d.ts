@@ -8,6 +8,8 @@ interface ActivityFeedFeatureProps {
   timestamp: number;
 }
 
-export interface ActivityFeedDescrProps extends Partial<ActivityFeedFeatureProps> {
-  deleteItem: (timestamp: string | undefined) => void;
+export interface ActivityFeedDescrProps extends Partial<ActivityFeedFeatureProps> {}
+
+export interface ActivityFeedProps {
+  feed: ActivityFeedDescrProps;
 }

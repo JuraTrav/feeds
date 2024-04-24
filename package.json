@@ -18,8 +18,14 @@
     "@fontsource/roboto": "^5.0.12",
     "@mui/icons-material": "^5.15.15",
     "@mui/material": "^5.15.15",
+    "@reduxjs/toolkit": "^2.2.3",
+    "@types/redux-logger": "^3.0.13",
+    "immer": "^10.0.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^9.1.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.4",

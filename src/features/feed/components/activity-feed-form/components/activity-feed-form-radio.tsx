@@ -2,14 +2,15 @@ import { FormControlLabel, Radio, Button, ButtonOwnProps } from "@mui/material";
 import FeedIcon from "@components/feed-icon/feed-icon";
 import React from "react";
 
-interface ActivityFeedFormRadioProps extends ButtonOwnProps {
-  iconName: string;
+export type FeedTypesProps = 'note' | 'call' | 'meeting' | 'coffee';
+
+type ActivityFeedFormRadioProps = ButtonOwnProps & {
+  iconName: FeedTypesProps;
   feedCheckedIconColor: string;
   feedIconColor: string;
 }
 
 const ActivityFeedFormRadio = ({ iconName, feedCheckedIconColor, feedIconColor, ...props }: ActivityFeedFormRadioProps) => {
-  console.log(iconName);
   return (
     <FormControlLabel
       value={iconName}
@@ -43,4 +44,5 @@ const ActivityFeedFormRadioMemo = React.memo(ActivityFeedFormRadio, (prevProps, 
   return prevProps.iconName === nextProps.iconName;
 });
 
-export { ActivityFeedFormRadioMemo };
+export { ActivityFeedFormRadioMemo as ActivityFeedFormRadio };
+// export { ActivityFeedFormRadio };

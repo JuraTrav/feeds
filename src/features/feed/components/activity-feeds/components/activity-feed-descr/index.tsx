@@ -1,11 +1,13 @@
+import { useDeleteFeedMutation } from '@features/feed/api/apiSlice';
 import { ActivityFeedDescrProps } from '@features/feed/types/activity-feed';
 import { Button, Typography } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import React from 'react';
 import { useState } from 'react';
 
-const ActivityFeedDescr = ({ deleteItem, ...feed }: ActivityFeedDescrProps) => {
+const ActivityFeedDescr = ({ ...feed }: ActivityFeedDescrProps) => {
   const [hidden, setHidden] = useState(false);
+  const [deleteFeed] = useDeleteFeedMutation();
 
   return (
     <Grid2
@@ -21,7 +23,7 @@ const ActivityFeedDescr = ({ deleteItem, ...feed }: ActivityFeedDescrProps) => {
         {feed.message}
       </Typography>
       {hidden ? (
-        <Button onClick={() => deleteItem(feed.id)} variant="text" sx={{ color: '#00c6ed', position: 'absolute', top: 15, right: 2 }}>
+        <Button onClick={() => deleteFeed(feed.id)} variant="text" sx={{ color: '#00c6ed', position: 'absolute', top: 15, right: 2 }}>
           Delete
         </Button>
       ) : null}
