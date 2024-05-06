@@ -1,6 +1,6 @@
 import Grid2 from "@mui/material/Unstable_Grid2";
 import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
-import React from "react";
+import { memo } from "react";
 
 const FeedFormIcon = () => {
   return (
@@ -10,6 +10,6 @@ const FeedFormIcon = () => {
   );
 };
 
-const MemoFeedFormIcon = React.memo(FeedFormIcon);
+const MemoFeedFormIcon = memo(FeedFormIcon);
 
 export { MemoFeedFormIcon as FeedFormIcon };

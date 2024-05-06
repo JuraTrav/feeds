@@ -9,6 +9,20 @@ export const FeedsRadioButtons = () => {
   const FeedRadioButtons = useSelector(selectFeedTypes);
   const dispatch = useDispatch();
 
+  const renderRadioButtons = () => {
+    return FeedRadioButtons.map((iconName) => (
+      <ActivityFeedFormRadio
+        key={iconName}
+        iconName={iconName}
+        feedCheckedIconColor="#fff"
+        feedIconColor="#999"
+        sx={{ minWidth: '12px', p: 1, m: 1, borderRadius: 50 }}
+        variant="contained"
+        size="small"
+      />
+    ));
+  };
+
   return (
     <RadioGroup
       row
@@ -18,17 +32,7 @@ export const FeedsRadioButtons = () => {
       name="type"
       onChange={(e) => dispatch(setFeedType(e.target.value as FeedTypesProps))}
     >
-      {FeedRadioButtons.map((iconName) => (
-        <ActivityFeedFormRadio
-          key={iconName}
-          iconName={iconName}
-          feedCheckedIconColor="#fff"
-          feedIconColor="#999"
-          sx={{ minWidth: '12px', p: 1, m: 1, borderRadius: 50 }}
-          variant="contained"
-          size="small"
-        />
-      ))}
+      {renderRadioButtons()}
     </RadioGroup>
   )
 }

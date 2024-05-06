@@ -18,6 +18,7 @@ export default {
     '^@features(.*)$': '<rootDir>/src/features$1',
     '^@utils(.*)$': '<rootDir>/src/utils$1',
     '^@contexts(.*)$': '<rootDir>/src/contexts$1',
+    '^@src(.*)$': '<rootDir>/src$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };

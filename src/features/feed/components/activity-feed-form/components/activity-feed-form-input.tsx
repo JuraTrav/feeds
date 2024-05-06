@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import React, { forwardRef } from "react";
+import React, { forwardRef, memo } from "react";
 
 type FormInputProps = {
   handleFocus: (e: React.FocusEvent<HTMLInputElement>) => void;
@@ -25,6 +25,6 @@ const ActivityFeedFormInput = forwardRef<FormInputRef, FormInputProps>(({ handle
   );
 });
 
-const MemoActivityFeedFormInput = React.memo(ActivityFeedFormInput);
+const MemoActivityFeedFormInput = memo(ActivityFeedFormInput);
 
 export { MemoActivityFeedFormInput as ActivityFeedFormInput };

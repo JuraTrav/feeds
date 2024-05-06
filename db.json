@@ -39,6 +39,14 @@
       "message": "Doloremque et et. Quisquam et et. Quia et et.",
       "type": "meeting",
       "timestamp": 1712578758492
+    },
+    {
+      "id": "f33a",
+      "message": "new one ",
+      "type": "coffee",
+      "user": "You",
+      "contact": "user",
+      "timestamp": 1714158718516
     }
   ]
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { Button, FormControl } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import FeedsRadioButtons from './feeds-radio-buttons';
@@ -23,7 +23,7 @@ const ActivityFeedFormFooter = ({ isActive }: ActivityFeedFormFooterProps) => {
   );
 };
 
-const ActivityFeedFormFooterMemo = React.memo(ActivityFeedFormFooter, (prevProps, nextProps) => {
+const ActivityFeedFormFooterMemo = memo(ActivityFeedFormFooter, (prevProps, nextProps) => {
   return prevProps.isActive === nextProps.isActive;
 });
 

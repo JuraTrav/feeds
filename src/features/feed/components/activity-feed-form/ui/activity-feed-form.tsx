@@ -1,24 +1,24 @@
-import { useCallback, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import { ActivityFeedFormFooter } from '../components/activity-feed-form-footer';
 import FocusOutside from '../helper/outside-click';
 import { FeedFormIcon } from '../components/feed-form-icon';
 import { ActivityFeedFormInput } from '../components/activity-feed-form-input';
-import React from 'react';
-import { usePostFeedMutation } from '@features/feed/api/apiSlice';
+// import { usePostFeedMutation } from '@features/feed/api/apiSlice';
 
 const ActivityFeedForm = () => {
-  const [postFeed] = usePostFeedMutation();
+  // const [postFeed] = usePostFeedMutation();
   const [footer, setFooter] = useState(false);
-  const messsageRef = React.useRef<HTMLInputElement>(null);
+  const messsageRef = useRef<HTMLInputElement>(null);
   const handleFocus = () => {
     setFooter(true);
   };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const $formData = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries());
-    const data = { ...$formData, user: "You", contact: "user", timestamp: new Date().valueOf() }
-    postFeed(data);
+    console.log(e.nativeEvent)
+    // const $formData = Object.fromEntries(new FormData(e.target as HTMLFormElement).entries());
+    // const data = { ...$formData, user: "You", contact: "user", timestamp: new Date().valueOf() }
+    // postFeed(data);
     if (messsageRef.current) {
       messsageRef.current.value = "";
     }
